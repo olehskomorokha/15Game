@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class GameScript : MonoBehaviour
 {
-    [SerializeField] private GameObject emptySpace;
+    [SerializeField] private GameObject emptySpace = null;
     private Camera _camera;
+    [SerializeField] private Camera _cameraTarget;
+    [SerializeField] private TilesScript[] tiles;
+    private int emptySpaceIndex = 15;
     void Start()
     {
         _camera = Camera.main;
+        Shuffle();
     }
 
  
@@ -23,10 +27,73 @@ public class GameScript : MonoBehaviour
                 if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60)
                 {
                     Vector2 lastEmptyPosition = emptySpace.transform.position;
-                    emptySpace.transform.position = hit.transform.position;
-                    hit.transform.position = lastEmptyPosition;
+                    TilesScript thisTile = hit.transform.GetComponent<TilesScript>();
+                    emptySpace.transform.position = thisTile.targetPosition;
+                    thisTile.targetPosition = lastEmptyPosition;
+                    int tileIndex = findIndex(thisTile);
+                    tiles[emptySpaceIndex] = tiles[tileIndex];
+                    tiles[tileIndex] = null;
+                    emptySpaceIndex = tileIndex;
                 }
             }
         }
+    }
+    public void Shuffle()
+    {
+        //if (emptySpaceIndex != 15)
+        //{
+        //    var tileOn15LastPos = tiles[15].targetPosition;
+        //    tiles[15].targetPosition = emptySpace.transform.position;
+        //    emptySpace.transform.position = tileOn15LastPos;
+        //    tiles[emptySpaceIndex] = tiles[15];
+        //    tiles[15] = null;
+        //    emptySpaceIndex = 15;
+        //}
+        //int inversion;
+        for (int i = 0; i <= 14; i++)
+        {
+            var lastPos = tiles[i].targetPosition;
+            int randomIndex = Random.Range(0, 14);
+            tiles[i].targetPosition = tiles[randomIndex].targetPosition;
+            tiles[randomIndex].targetPosition = lastPos;
+            var tile = tiles[i];
+            tiles[i] = tiles[randomIndex];
+            tiles[randomIndex] = tile;
+        }
+        Debug.Log("");
+    }
+    public int findIndex(TilesScript ts)
+    {
+        for(int i = 0; i < tiles.Length; i++)
+        {
+            if (tiles[i] != null)
+            {
+                if (tiles[i] == ts)
+                {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+    public int GetInversions()
+    {
+        int inversionsSum = 0;
+        for (int i = 0; i < tiles.Length; i++)
+        {
+            int thisTileInversion = 0;
+            for (int j = 0; j < tiles.Length; j++)
+            {
+                if (tiles[j] != null)
+                {
+                    if (tiles[i].number > tiles[j].number)
+                    {
+                        thisTileInversion++;
+                    }
+                }
+            }
+            inversionsSum += thisTileInversion;
+        }   
+        return inversionsSum;
     }
 }
