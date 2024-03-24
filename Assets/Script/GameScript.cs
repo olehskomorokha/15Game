@@ -18,22 +18,49 @@ public class GameScript : MonoBehaviour
  
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+        //    if (hit)
+        //    {
+        //        if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60)
+        //        {
+        //            Vector2 lastEmptyPosition = emptySpace.transform.position;
+        //            TilesScript thisTile = hit.transform.GetComponent<TilesScript>();
+        //            emptySpace.transform.position = thisTile.transform.position;
+        //            thisTile.targetPosition = lastEmptyPosition;
+        //            int tileIndex = findIndex(thisTile);
+        //            tiles[emptySpaceIndex] = tiles[tileIndex];
+        //            tiles[tileIndex] = null;
+        //            emptySpaceIndex = tileIndex;
+        //        }
+        //    }
+        //}
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
             if (hit)
             {
-                if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60)
+                // Перевірка чи було клацнуто на не пусті клітини
+                if (hit.transform != null && hit.transform.gameObject != null)
                 {
-                    Vector2 lastEmptyPosition = emptySpace.transform.position;
-                    TilesScript thisTile = hit.transform.GetComponent<TilesScript>();
-                    emptySpace.transform.position = thisTile.targetPosition;
-                    thisTile.targetPosition = lastEmptyPosition;
-                    int tileIndex = findIndex(thisTile);
-                    tiles[emptySpaceIndex] = tiles[tileIndex];
-                    tiles[tileIndex] = null;
-                    emptySpaceIndex = tileIndex;
+                    // Перевірка чи не пуста клітина була клацнута
+                    if (hit.transform.gameObject != emptySpace)
+                    {
+                        if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60)
+                        {
+                            Vector2 lastEmptyPosition = emptySpace.transform.position;
+                            TilesScript thisTile = hit.transform.GetComponent<TilesScript>();
+                            emptySpace.transform.position = thisTile.transform.position;
+                            thisTile.targetPosition = lastEmptyPosition;
+                            int tileIndex = findIndex(thisTile);
+                            tiles[emptySpaceIndex] = tiles[tileIndex];
+                            tiles[tileIndex] = null;
+                            emptySpaceIndex = tileIndex;
+                        }
+                    }
                 }
             }
         }
@@ -60,7 +87,6 @@ public class GameScript : MonoBehaviour
             tiles[i] = tiles[randomIndex];
             tiles[randomIndex] = tile;
         }
-        Debug.Log("");
     }
     public int findIndex(TilesScript ts)
     {
