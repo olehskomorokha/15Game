@@ -49,7 +49,7 @@ public class GameScript : MonoBehaviour
                     // Перевірка чи не пуста клітина була клацнута
                     if (hit.transform.gameObject != emptySpace)
                     {
-                        if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60)
+                        if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60f)
                         {
                             Vector2 lastEmptyPosition = emptySpace.transform.position;
                             TilesScript thisTile = hit.transform.GetComponent<TilesScript>();
@@ -63,6 +63,21 @@ public class GameScript : MonoBehaviour
                     }
                 }
             }
+        }
+        int correctTiles = 0;
+        foreach (var a in tiles)
+        {
+            if(a != null)
+            {
+                if (a.inRightPlace)
+                {
+                    correctTiles++;
+                }
+            }
+        }
+        if (correctTiles == tiles.Length - 1)
+        {
+            Debug.Log("YOU WON");
         }
     }
     public void Shuffle()

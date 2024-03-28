@@ -1094,6 +1094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 12
+  inRightPlace: 0
 --- !u!1 &120349993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,6 +1770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 6
+  inRightPlace: 0
 --- !u!1 &238645494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,6 +2135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 1
+  inRightPlace: 0
 --- !u!1 &380621839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,6 +3534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 8
+  inRightPlace: 0
 --- !u!1 &561575616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,6 +3815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 7
+  inRightPlace: 0
 --- !u!1 &620264334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,6 +4259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 11
+  inRightPlace: 0
 --- !u!1 &760315916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4825,6 +4831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 14
+  inRightPlace: 0
 --- !u!1 &818002935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6598,6 +6605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 15
+  inRightPlace: 0
 --- !u!1 &1335509703
 GameObject:
   m_ObjectHideFlags: 0
@@ -6744,6 +6752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 4
+  inRightPlace: 0
 --- !u!1 &1339471222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7050,6 +7059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 5
+  inRightPlace: 0
 --- !u!1 &1434468096
 GameObject:
   m_ObjectHideFlags: 0
@@ -7967,6 +7977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 9
+  inRightPlace: 0
 --- !u!1 &1637058458
 GameObject:
   m_ObjectHideFlags: 0
@@ -8129,7 +8140,7 @@ Transform:
   m_GameObject: {fileID: 1647124794}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 109.32, y: -2.62, z: 0}
+  m_LocalPosition: {x: 109.2, y: -2.62, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8247,6 +8258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 3
+  inRightPlace: 0
 --- !u!1 &1649951099
 GameObject:
   m_ObjectHideFlags: 0
@@ -8393,6 +8405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 13
+  inRightPlace: 0
 --- !u!1 &1651146070
 GameObject:
   m_ObjectHideFlags: 0
@@ -9686,6 +9699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 2
+  inRightPlace: 0
 --- !u!1 &2034202315
 GameObject:
   m_ObjectHideFlags: 0
@@ -9832,6 +9846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
   number: 10
+  inRightPlace: 0
 --- !u!1 &2039943752
 GameObject:
   m_ObjectHideFlags: 0
