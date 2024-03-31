@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameScript : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameScript : MonoBehaviour
     [SerializeField] private Camera _cameraTarget;
     [SerializeField] private TilesScript[] tiles;
     private int emptySpaceIndex = 15;
+    private bool _isFinished;
+    [SerializeField] private GameObject endPanel;
     void Start()
     {
         _camera = Camera.main;
@@ -64,33 +67,41 @@ public class GameScript : MonoBehaviour
                 }
             }
         }
-        int correctTiles = 0;
-        foreach (var a in tiles)
+        if (!_isFinished)
         {
-            if(a != null)
+            int correctTiles = 0;
+            foreach (var a in tiles)
             {
-                if (a.inRightPlace)
+                if (a != null)
                 {
-                    correctTiles++;
+                    if (a.inRightPlace)
+                    {
+                        correctTiles++;
+                    }
                 }
             }
+            if (correctTiles == tiles.Length - 1)
+            {
+                _isFinished = true;
+                endPanel.SetActive(true);
+            }
         }
-        if (correctTiles == tiles.Length - 1)
-        {
-            Debug.Log("YOU WON");
-        }
+    }
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void Shuffle()
     {
-        //if (emptySpaceIndex != 15)
-        //{
-        //    var tileOn15LastPos = tiles[15].targetPosition;
-        //    tiles[15].targetPosition = emptySpace.transform.position;
-        //    emptySpace.transform.position = tileOn15LastPos;
-        //    tiles[emptySpaceIndex] = tiles[15];
-        //    tiles[15] = null;
-        //    emptySpaceIndex = 15;
-        //}
+        if (emptySpaceIndex != 15)
+        {
+            var tileOn15LastPos = tiles[15].targetPosition;
+            tiles[15].targetPosition = emptySpace.transform.position;
+            emptySpace.transform.position = tileOn15LastPos;
+            tiles[emptySpaceIndex] = tiles[15];
+            tiles[15] = null;
+            emptySpaceIndex = 15;
+        }
         //int inversion;
         for (int i = 0; i <= 14; i++)
         {
