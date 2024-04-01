@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameScript : MonoBehaviour
     private int emptySpaceIndex = 15;
     private bool _isFinished;
     [SerializeField] private GameObject endPanel;
+    [SerializeField] Text endPanelTimerText;
     void Start()
     {
         _camera = Camera.main;
@@ -84,6 +86,9 @@ public class GameScript : MonoBehaviour
             {
                 _isFinished = true;
                 endPanel.SetActive(true);
+                var a = GetComponent<TimeScript>();
+                a.StopTimer();
+                endPanelTimerText.text = (a.minutes < 10 ? "0" : "") + a.minutes + ":" + (a.seconds < 10 ? "0" : "") + a.seconds;
             }
         }
     }

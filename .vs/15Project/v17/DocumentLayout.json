@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\olegs\\15Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|C:\\Users\\olegs\\15Project\\assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\tilesscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\timescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\timescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|C:\\Users\\olegs\\15Project\\assets\\script\\tilesscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tilesscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,12 +35,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TimeScript.cs",
+              "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TimeScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\TimeScript.cs",
+              "ToolTip": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TimeScript.cs",
+              "RelativeToolTip": "Assets\\Script\\TimeScript.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBYAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T11:54:15.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TilesScript.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TilesScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TilesScript.cs",
               "ToolTip": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TilesScript.cs",
               "RelativeToolTip": "Assets\\Script\\TilesScript.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-18T16:55:29.108Z",
               "EditorCaption": ""
@@ -49,7 +66,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\GameScript.cs",
               "ToolTip": "C:\\Users\\olegs\\15Project\\Assets\\Script\\GameScript.cs",
               "RelativeToolTip": "Assets\\Script\\GameScript.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBgAAAALAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-18T14:40:33.495Z",
               "EditorCaption": ""
