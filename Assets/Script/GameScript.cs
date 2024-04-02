@@ -14,6 +14,8 @@ public class GameScript : MonoBehaviour
     private bool _isFinished;
     [SerializeField] private GameObject endPanel;
     [SerializeField] Text endPanelTimerText;
+    [SerializeField] Text OperationText;
+    public int operation;
     void Start()
     {
         _camera = Camera.main;
@@ -64,6 +66,8 @@ public class GameScript : MonoBehaviour
                             tiles[emptySpaceIndex] = tiles[tileIndex];
                             tiles[tileIndex] = null;
                             emptySpaceIndex = tileIndex;
+                            operation++;
+                            OperationText.text = "Крок : " + operation.ToString();
                         }
                     }
                 }
