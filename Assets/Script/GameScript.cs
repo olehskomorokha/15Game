@@ -9,11 +9,11 @@ public class GameScript : MonoBehaviour
     [SerializeField] private GameObject emptySpace = null;
     private Camera _camera;
     [SerializeField] private Camera _cameraTarget;
-    [SerializeField] private TilesScript[] tiles;
+    [SerializeField] private TilesScript[] tiles = null;
     private int emptySpaceIndex = 15;
     private bool _isFinished;
-    [SerializeField] private GameObject endPanel;
-    [SerializeField] Text endPanelTimerText;
+    [SerializeField] private GameObject endPanel = null, newRecordText = null;
+    [SerializeField] Text endPanelTimerText = null, bestTimeText = null;
     [SerializeField] Text OperationText;
     public int operation;
     void Start()
@@ -93,6 +93,28 @@ public class GameScript : MonoBehaviour
                 var a = GetComponent<TimeScript>();
                 a.StopTimer();
                 endPanelTimerText.text = (a.minutes < 10 ? "0" : "") + a.minutes + ":" + (a.seconds < 10 ? "0" : "") + a.seconds;
+                int bestTime;
+                if (PlayerPrefs.HasKey("bestTime"))
+                {
+                    bestTime = PlayerPrefs.GetInt("bestTime");
+                }
+                else
+                {
+                    bestTime = 999999;
+                }
+                int playerTime = a.minutes * 60 + a.seconds;
+                if (playerTime < bestTime) 
+                {
+                    newRecordText.SetActive(true);
+                    PlayerPrefs.SetInt("bestTime", playerTime);
+                }
+                else
+                {
+                    int minutes = bestTime / 60;
+                    int seconds = bestTime - minutes * 60;
+                    bestTimeText.text = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+                    bestTimeText.transform.parent.gameObject.SetActive(true);
+                }
             }
         }
     }
@@ -102,15 +124,15 @@ public class GameScript : MonoBehaviour
     }
     public void Shuffle()
     {
-        if (emptySpaceIndex != 15)
-        {
-            var tileOn15LastPos = tiles[15].targetPosition;
-            tiles[15].targetPosition = emptySpace.transform.position;
-            emptySpace.transform.position = tileOn15LastPos;
-            tiles[emptySpaceIndex] = tiles[15];
-            tiles[15] = null;
-            emptySpaceIndex = 15;
-        }
+        //if (emptySpaceIndex != 15)
+        //{
+        //    var tileOn15LastPos = tiles[15].targetPosition;
+        //    tiles[15].targetPosition = emptySpace.transform.position;
+        //    emptySpace.transform.position = tileOn15LastPos;
+        //    tiles[emptySpaceIndex] = tiles[15];
+        //    tiles[15] = null;
+        //    emptySpaceIndex = 15;
+        //}
         //int inversion;
         for (int i = 0; i <= 14; i++)
         {
