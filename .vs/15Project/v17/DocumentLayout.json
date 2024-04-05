@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\olegs\\15Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\olegs\\15Project\\Assets\\Script\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Script\\MainMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T17:05:50.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TimeScript.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TimeScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TimeScript.cs",
@@ -46,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TilesScript.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TilesScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TilesScript.cs",
@@ -58,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameScript.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\GameScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameScript.cs",
