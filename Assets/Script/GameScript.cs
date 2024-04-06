@@ -25,6 +25,25 @@ public class GameScript : MonoBehaviour
  
     void Update()
     {
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+        //    if (hit)
+        //    {
+        //        if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60)
+        //        {
+        //            Vector2 lastEmptyPosition = emptySpace.transform.position;
+        //            TilesScript thisTile = hit.transform.GetComponent<TilesScript>();
+        //            emptySpace.transform.position = thisTile.transform.position;
+        //            thisTile.targetPosition = lastEmptyPosition;
+        //            int tileIndex = findIndex(thisTile);
+        //            tiles[emptySpaceIndex] = tiles[tileIndex];
+        //            tiles[tileIndex] = null;
+        //            emptySpaceIndex = tileIndex;
+        //        }
+        //    }
+        //}
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
@@ -105,15 +124,15 @@ public class GameScript : MonoBehaviour
     }
     public void Shuffle()
     {
-        if (emptySpaceIndex != 15)
-        {
-            var tileOn15LastPos = tiles[15].targetPosition;
-            tiles[15].targetPosition = emptySpace.transform.position;
-            emptySpace.transform.position = tileOn15LastPos;
-            tiles[emptySpaceIndex] = tiles[15];
-            tiles[15] = null;
-            emptySpaceIndex = 15;
-        }
+        //if (emptySpaceIndex != 15)
+        //{
+        //    var tileOn15LastPos = tiles[15].targetPosition;
+        //    tiles[15].targetPosition = emptySpace.transform.position;
+        //    emptySpace.transform.position = tileOn15LastPos;
+        //    tiles[emptySpaceIndex] = tiles[15];
+        //    tiles[15] = null;
+        //    emptySpaceIndex = 15;
+        //}
         //int inversion;
         for (int i = 0; i <= 14; i++)
         {
