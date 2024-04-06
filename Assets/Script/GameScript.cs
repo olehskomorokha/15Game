@@ -124,26 +124,31 @@ public class GameScript : MonoBehaviour
     }
     public void Shuffle()
     {
-        //if (emptySpaceIndex != 15)
-        //{
-        //    var tileOn15LastPos = tiles[15].targetPosition;
-        //    tiles[15].targetPosition = emptySpace.transform.position;
-        //    emptySpace.transform.position = tileOn15LastPos;
-        //    tiles[emptySpaceIndex] = tiles[15];
-        //    tiles[15] = null;
-        //    emptySpaceIndex = 15;
-        //}
-        //int inversion;
-        for (int i = 0; i <= 14; i++)
+        if (emptySpaceIndex != 15)
         {
-            var lastPos = tiles[i].targetPosition;
-            int randomIndex = Random.Range(0, 14);
-            tiles[i].targetPosition = tiles[randomIndex].targetPosition;
-            tiles[randomIndex].targetPosition = lastPos;
-            var tile = tiles[i];
-            tiles[i] = tiles[randomIndex];
-            tiles[randomIndex] = tile;
+            var tileOn15LastPos = tiles[15].targetPosition;
+            tiles[15].targetPosition = emptySpace.transform.position;
+            emptySpace.transform.position = tileOn15LastPos;
+            tiles[emptySpaceIndex] = tiles[15];
+            tiles[15] = null;
+            emptySpaceIndex = 15;
         }
+        int invertion;
+        do
+        {
+            for (int i = 0; i <= 14; i++)
+            {
+                var lastPos = tiles[i].targetPosition;
+                int randomIndex = Random.Range(0, 14);
+                tiles[i].targetPosition = tiles[randomIndex].targetPosition;
+                tiles[randomIndex].targetPosition = lastPos;
+                var tile = tiles[i];
+                tiles[i] = tiles[randomIndex];
+                tiles[randomIndex] = tile;
+            }
+            invertion = GetInversions();
+            Debug.Log("Shuffle" + invertion);
+        } while (invertion % 2 != 0);
     }
     public int findIndex(TilesScript ts)
     {
@@ -162,10 +167,10 @@ public class GameScript : MonoBehaviour
     public int GetInversions()
     {
         int inversionsSum = 0;
-        for (int i = 0; i < tiles.Length; i++)
+        for (int i = 0; i < tiles.Length - 1; i++)
         {
             int thisTileInversion = 0;
-            for (int j = 0; j < tiles.Length; j++)
+            for (int j = i + 1; j < tiles.Length; j++)
             {
                 if (tiles[j] != null)
                 {
@@ -176,7 +181,8 @@ public class GameScript : MonoBehaviour
                 }
             }
             inversionsSum += thisTileInversion;
-        }   
+        }
         return inversionsSum;
     }
+
 }
