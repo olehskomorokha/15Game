@@ -29,4 +29,9 @@ public class TimeScript : MonoBehaviour
         timeText.gameObject.SetActive(false);
     }
 
+    public void ContinueTimer()
+    {
+        timeText.gameObject.SetActive(true);
+        InvokeRepeating(nameof(AddSeconds), 1f, 1f);
+    }
 }

@@ -25,25 +25,6 @@ public class GameScript : MonoBehaviour
  
     void Update()
     {
-        //if(Input.GetMouseButtonDown(0))
-        //{
-        //    Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-        //    if (hit)
-        //    {
-        //        if (Vector2.Distance(emptySpace.transform.position, hit.transform.position) < 60)
-        //        {
-        //            Vector2 lastEmptyPosition = emptySpace.transform.position;
-        //            TilesScript thisTile = hit.transform.GetComponent<TilesScript>();
-        //            emptySpace.transform.position = thisTile.transform.position;
-        //            thisTile.targetPosition = lastEmptyPosition;
-        //            int tileIndex = findIndex(thisTile);
-        //            tiles[emptySpaceIndex] = tiles[tileIndex];
-        //            tiles[tileIndex] = null;
-        //            emptySpaceIndex = tileIndex;
-        //        }
-        //    }
-        //}
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
@@ -122,6 +103,28 @@ public class GameScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    [SerializeField] public GameObject pauseMenu;
+    [SerializeField] public GameObject GameMenu;
+    public void StopGame() 
+    {
+        pauseMenu.SetActive(true);
+        GameMenu.SetActive(false);
+        var timer = GetComponent<TimeScript>();
+        if (timer != null)
+            timer.StopTimer();
+    }
+    public void ContinueGame()
+    {
+        pauseMenu.SetActive(false);
+        GameMenu.SetActive(true);
+        var timer = GetComponent<TimeScript>();
+        timer.ContinueTimer();
+
+    }
+    public void ExitGame()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     public void Shuffle()
     {
         if (emptySpaceIndex != 15)
@@ -184,5 +187,4 @@ public class GameScript : MonoBehaviour
         }
         return inversionsSum;
     }
-
 }
