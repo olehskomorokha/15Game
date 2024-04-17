@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\olegs\\15Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\volumesettingsscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\volumesettingsscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\audioscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\audioscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|C:\\Users\\olegs\\15Project\\assets\\script\\timescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\timescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|c:\\users\\olegs\\15project\\assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|C:\\Users\\olegs\\15Project\\assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AFB333D-F2B5-C52E-D57F-B3D5746D58B9}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +50,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "VolumeSettingsScript.cs",
+              "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\VolumeSettingsScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\VolumeSettingsScript.cs",
+              "ToolTip": "C:\\Users\\olegs\\15Project\\Assets\\Script\\VolumeSettingsScript.cs",
+              "RelativeToolTip": "Assets\\Script\\VolumeSettingsScript.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T14:48:01.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AudioScript.cs",
+              "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\AudioScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\AudioScript.cs",
+              "ToolTip": "C:\\Users\\olegs\\15Project\\Assets\\Script\\AudioScript.cs",
+              "RelativeToolTip": "Assets\\Script\\AudioScript.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAwwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T12:22:53.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PauseMenu.cs",
@@ -54,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MainMenu.cs",
@@ -66,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TimeScript.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TimeScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TimeScript.cs",
@@ -74,12 +108,11 @@
               "RelativeToolTip": "Assets\\Script\\TimeScript.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAIwBwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T11:54:15.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-01T11:54:15.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TilesScript.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\TilesScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TilesScript.cs",
@@ -87,12 +120,11 @@
               "RelativeToolTip": "Assets\\Script\\TilesScript.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAQwAgAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T16:55:29.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T16:55:29.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GameScript.cs",
               "DocumentMoniker": "C:\\Users\\olegs\\15Project\\Assets\\Script\\GameScript.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameScript.cs",
@@ -100,8 +132,7 @@
               "RelativeToolTip": "Assets\\Script\\GameScript.cs",
               "ViewState": "AQIAAGkAAAAAAAAAAAAowHgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T14:40:33.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T14:40:33.495Z"
             }
           ]
         },
