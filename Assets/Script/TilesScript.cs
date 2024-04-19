@@ -23,7 +23,7 @@ public class TilesScript : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, targetPosition, 0.05f);
         /// for color check
-        float errorMargin = 30f; // Задайте допустиму похибку
+        float errorMargin = 30f;
         if (Vector3.Distance(targetPosition, correctPosition) < errorMargin)
         {
             _sprite.color = Color.green;
